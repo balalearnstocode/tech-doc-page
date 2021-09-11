@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC: Technical Documentation Page</title>
+    <link href="./main.css" rel="stylesheet">
+</head>
+<body>
+    <header id="body-title">Introduction to CSS FlexBox & CSS Grid</header>
+    <main id="main-doc">
+        <nav id="navbar">
+            <header>Menu</header>
+            <div class="nav-links">
+                <a href="#CSS_Flexbox_Layout_Module" class="nav-link">CSS Flexbox Layout Module</a>
+                <a href="#CSS_Flex_Container" class="nav-link">CSS Flex Container</a>
+                <a href="#CSS_Flex_Items" class="nav-link">CSS Flex Items</a>
+                <a href="#CSS_Flex_Responsive" class="nav-link">CSS Flex Responsive</a>
+                <a href="#CSS_Grid_Layout_Module" class="nav-link">CSS Grid Layout Module</a>
+            </div>
+        </nav>
+        <div class="content">
+            <section id="CSS_Flexbox_Layout_Module" class="main-section">
+                <header>CSS Flexbox Layout Module</header>
+                <p>
+                    Before the Flexbox Layout module, there were four layout modes:
+                    <ul>
+                        <li>Block, for sections in a webpage</li>
+                        <li>Inline, for text</li>
+                        <li>Table, for two-dimensional table data</li>
+                        <li>Positioned, for explicit position of an element</li>
+                    </ul>
+                    The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.
+                </p>
+                <p>
+                    Example: A flex container with three flex items:
+                    <pre>
+                        <code>
+                            &lt;div class="flex-container"&gt;
+                                &lt;div&gt;1&lt;/div&gt;
+                                &lt;div&gt;2&lt;/div&gt;
+                                &lt;div&gt;3&lt;/div&gt;
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </p>
+            </section>
+            <section id="CSS_Flex_Container" class="main-section">
+                <header>CSS Flex Container</header>
+                <p>
+                    Parent Element (Container)
+                    <pre>
+                        <code>
+                            .flex-container {
+                                display: flex;
+                            }
+                        </code>
+                    </pre>
+                </p>
+                <p>
+                    The flex container properties are:
+                    <ul>
+                        <li>flex-direction</li>
+                        <li>flex-wrap</li>
+                        <li>flex-flow</li>
+                        <li>justify-content</li>
+                        <li>align-items</li>
+                        <li>align-content</li>
+                    </ul>
+                </p>
+                <p>
+                    Perfect centering:
+                    Set both the justify-content and align-items properties to center, and the flex item will be perfectly centered:
+                    <pre><code>
+                        .flex-container {
+                            display: flex;
+                            height: 300px;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    </code></pre>
+                </p>
+            </section>
+            <section id="CSS_Flex_Items" class="main-section">
+                <header>CSS Flex Items</header>
+                <p>
+                    The direct child elements of a flex container automatically becomes flexible (flex) items.
+                    <pre><code>
+                        &lt;div class="flex-container"&gt;
+                            &lt;div&gt;1&lt;/div&gt;
+                            &lt;div&gt;2&lt;/div&gt;
+                            &lt;div&gt;3&lt;/div&gt;
+                            &lt;div&gt;4&lt;/div&gt;
+                        &lt;/div&gt;
+                    </code></pre>
+                </p>
+                <p>
+                    The flex item properties are:
+                    <ul>
+                        <li>order</li>
+                        <li>flex-grow</li>
+                        <li>flex-shrink</li>
+                        <li>flex-basis</li>
+                        <li>flex</li>
+                        <li>align-self</li>
+                    </ul>
+                </p>
+            </section>
+            <section id="CSS_Flex_Responsive" class="main-section">
+                <header>CSS Flex Responsive</header>
+                <p>
+                    Responsive Flexbox
+                </p>
+                <p>
+                    <pre><code>
+                        .flex-container {
+                            display: flex;
+                            flex-wrap: wrap;
+                          }
+
+                          .flex-item-left {
+                            flex: 50%;
+                          }
+
+                          .flex-item-right {
+                            flex: 50%;
+                          }
+
+                          /* Responsive layout - makes a one column layout instead of a two-column layout */
+                          @media (max-width: 800px) {
+                            .flex-item-right, .flex-item-left {
+                              flex: 100%;
+                            }
+                          }
+                    </code></pre>
+                </p>
+            </section>
+            <section id="CSS_Grid_Layout_Module" class="main-section">
+                <header>CSS Grid Layout Module</header>
+                <p>
+                    The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning.
+                </p>
+                <p>
+                    <pre><code>
+                        .grid-container {
+                            display: grid;
+                            grid-template-columns: auto auto auto;
+                        }
+                    </code></pre>
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <section id="source-code">Source code:
+        <a href="https://github.com/balalearnstocode/tech-doc-page"
+        target="_blank">https://github.com/balalearnstocode/tech-doc-page</a>
+    </section>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
